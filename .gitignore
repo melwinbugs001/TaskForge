@@ -1,0 +1,45 @@
+# Local environment secrets; keep example templates trackable.
+.env
+.env.*
+!.env.example
+!**/.env.example
+
+# Personal credential exports and secret bundles.
+credentials.json
+credentials.*.json
+secrets.json
+secrets.*.json
+secrets/
+**/secrets/
+
+# Generated keys, certificates, and keystores.
+*.pem
+*.key
+*.p12
+*.pfx
+*.p7b
+*.p7c
+*.der
+*.jks
+*.keystore
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+
+# Local logs, backups, and operating-system metadata.
+*.log
+*.bak
+*.backup
+*.orig
+.DS_Store
+Thumbs.db
+
+# Local databases and Python environments.
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+.venv/
+**/__pycache__/
+**/.pytest_cache/
