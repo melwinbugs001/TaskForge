@@ -1,5 +1,6 @@
 .env
 .env.*
+.env.push 
 !.env.example
 .venv/
 agentforge.db
