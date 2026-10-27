@@ -44,10 +44,12 @@ npm.cmd install
 npm.cmd run dev
 ```
 
-Open the local URL printed by Vite, normally `http://localhost:5173`. The Vite
-development server proxies `/api` calls to `http://127.0.0.1:8001`. To use a
-different API origin, copy `.env.example` to `.env.local`, set `VITE_API_URL`,
-and restart Vite.
+Open the local URL printed by Vite, normally `http://localhost:5173`. When
+Vite starts, it checks ports `8000`, `8001`, and `8002` for the TaskForge API
+health endpoint and proxies `/api` requests to the first backend it finds. If
+you start the backend after Vite, restart Vite so it can detect the backend.
+To use a different API origin, copy `.env.example` to `.env.local`, set
+`VITE_API_URL`, and restart Vite.
 
 ## Production build
 
